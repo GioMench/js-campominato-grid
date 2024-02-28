@@ -22,9 +22,6 @@ document.getElementById("play").addEventListener("click", function () {
         cell.classList.add('box');
         container.appendChild(cell);
 
-        
-
-
     }
 
     

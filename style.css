@@ -13,7 +13,7 @@ body{
     justify-content: space-between;
 }
 
-#play{
+input{
     margin:50px;
     color: rgb(0, 0, 162);
     border: 1px solid rgb(0, 0, 162);
@@ -23,17 +23,20 @@ body{
     border-radius: 20px;   
 }
 
-#play:hover{
+input:hover{
     color: rgb(96, 12, 69);
     background-color: rgba(96, 12, 69, 0.265);
     border: 1px solid rgb(96, 12, 69);
 }
+
+
 
 #container{
     max-width: 1000px;
     margin: auto;
     display: flex;
     flex-wrap: wrap; 
+    margin-bottom: 50px;
 }
 
 .box{

@@ -65,4 +65,9 @@ input:hover{
     
     background-color: rgba(137, 14, 185, 0.373);
     color: rgb(106, 0, 255);
+    
+}
+
+.boxMagic{
+    background-color: brown;
 }

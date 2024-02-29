@@ -11,39 +11,69 @@
  * add evenlistenr for change color of cell and log message
  * 
  */
-
-(function () {
-    const container = document.getElementById('container');
-
-    document.getElementById("play").addEventListener('click', function () {
-
-        container.innerHTML = '';
-    })
-
-    createGrid(numberCell);
-
-    
-})
-
 function createGrid(numberCell) {
 
-        for (let i = 0; i < numberCell; i++) {
+    listMagic = [];
 
-            const cell = document.createElement('div');
-            cell.classList.add('box');
-            container.appendChild(cell);
-            cell.append(i + 1);
-            console.log(cell);
+    for (let i = 0; i < 16; i++) {
 
-            cell.addEventListener('click', function () {
-                cell.classList.toggle('box2');
-                console.log(i + 1, 'colpita');
+        var numberMagic = Math.floor((Math.random() * 100) + 1);
+        numberMagic = listMagic[i];
 
-            })
-
+        if (!listMagic.includes(numberMagic)) {
+            listMagic.push(numberMagic)
+        } else {
+            numberMagic = Math.floor((Math.random() * 100) + 1);
+            listMagic.push(numberMagic);
+            console.log(numberMagic);
         }
 
     }
+
+    const container = document.getElementById('container');
+
+    for (let i = 0; i < numberCell; i++) {
+
+        const cell = document.createElement('div');
+        cell.classList.add('box');
+        container.appendChild(cell);
+        cell.append(i + 1);
+        //console.log(cell);
+
+        var theCell = cell;
+        console.log(i);
+
+
+        cell.addEventListener('click', function () {
+
+            if (numberMagic === i) {
+                cell.classList.toggle('boxMagic');
+            } else {
+                cell.classList.toggle('box2');
+                console.log(i + 1, 'colpita');
+            }
+
+
+        })
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 document.getElementById("play").addEventListener('click', function () {
 
@@ -72,11 +102,3 @@ document.getElementById("btn_hard").addEventListener('click', function () {
 
 
 });
-
-
-
-
-
-//document.getElementsByClassName('box').addEventListener("click", function () {
-//box.classList.add('box2')
-//})

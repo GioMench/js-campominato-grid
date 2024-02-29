@@ -41,9 +41,9 @@ function createGrid(numberCell) {
         container.appendChild(cell);
         cell.innerText = i
         
-        if (listMagic.includes(i)){
-            cell.append(listMagic[`${i}`])
-        }
+        //if (listMagic.includes(i)){
+            //cell.append(`${listMagic[i]}`)
+        //}
 
         cell.addEventListener('click', function () {
 

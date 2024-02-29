@@ -32,41 +32,38 @@ function createGrid(numberCell) {
 
     const container = document.getElementById('container');
 
-    for (let i = 0; i < numberCell; i++) {
 
-        const cell = document.createElement('div');
+    for (let i = 1; i <= numberCell; i++) {
+
+
+        let cell = document.createElement('div');
         cell.classList.add('box');
         container.appendChild(cell);
-
+        cell.innerText = i
         if (numberMagic === i) {
-            var magic = cell.append(numberMagic + 1);
-        } else {
-            var notMagic = cell.append(i + 1);
+            cell.append(numberMagic + 1);
         }
-        //console.log(cell);
-
-        var theCell = cell;
-        console.log(i);
 
 
+        
 
 
         cell.addEventListener('click', function () {
+            cell.classList.toggle('box2');
+            console.log(i + 1, 'colpita');
 
+            if (numberMagic == i) {
 
-            if (magic === notMagic) {
                 cell.classList.toggle('boxMagic');
-            } else {
-                cell.classList.toggle('box2');
-                console.log(i + 1, 'colpita');
+
             }
 
-
-        })
-
+        });
 
 
     }
+
+
 
 
 

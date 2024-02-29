@@ -11,28 +11,39 @@
  * add evenlistenr for change color of cell and log message
  * 
  */
-function createGrid(numberCell) {
 
+(function () {
     const container = document.getElementById('container');
 
-    for (let i = 0; i < numberCell; i++) {
+    document.getElementById("play").addEventListener('click', function () {
 
-        const cell = document.createElement('div');
-        cell.classList.add('box');
-        container.appendChild(cell);
-        cell.append(i + 1);
-        console.log(cell);
+        container.innerHTML = '';
+    })
 
-        cell.addEventListener('click', function () {
-            cell.classList.toggle('box2');
-            console.log(i + 1, 'colpita');
-            
-        })
+    createGrid(numberCell);
+
+    
+})
+
+function createGrid(numberCell) {
+
+        for (let i = 0; i < numberCell; i++) {
+
+            const cell = document.createElement('div');
+            cell.classList.add('box');
+            container.appendChild(cell);
+            cell.append(i + 1);
+            console.log(cell);
+
+            cell.addEventListener('click', function () {
+                cell.classList.toggle('box2');
+                console.log(i + 1, 'colpita');
+
+            })
+
+        }
 
     }
-
-}
-
 
 document.getElementById("play").addEventListener('click', function () {
 

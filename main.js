@@ -38,13 +38,19 @@ function createGrid(numberCell) {
         cell.classList.add('box');
         container.appendChild(cell);
         cell.append(i + 1);
+        if (numberMagic === i) {
+            cell.append(numberMagic);
+        }
         //console.log(cell);
 
         var theCell = cell;
         console.log(i);
 
+       
+
 
         cell.addEventListener('click', function () {
+
 
             if (numberMagic === i) {
                 cell.classList.toggle('boxMagic');

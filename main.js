@@ -17,13 +17,13 @@ function createGrid(numberCell) {
 
     for (let i = 0; i < 16; i++) {
 
-        var numberMagic = Math.floor((Math.random() * 100) + 1);
+        var numberMagic = Math.floor((Math.random() * numberCell) + 1);
         numberMagic = listMagic[i];
 
         if (!listMagic.includes(numberMagic)) {
             listMagic.push(numberMagic)
         } else {
-            numberMagic = Math.floor((Math.random() * 100) + 1);
+            numberMagic = Math.floor((Math.random() * numberCell) + 1);
             listMagic.push(numberMagic);
             console.log(numberMagic);
         }
@@ -40,15 +40,11 @@ function createGrid(numberCell) {
         cell.classList.add('box');
         container.appendChild(cell);
         cell.innerText = i
-        
-        //if (listMagic.includes(i)){
-            //cell.append(`${listMagic[i]}`)
-        //}
 
         cell.addEventListener('click', function () {
 
             cell.classList.toggle('box2');
-            console.log(i + 1, 'colpita');
+            console.log(i, 'colpita');
 
             if (listMagic.includes(i)) {
 

@@ -40,19 +40,17 @@ function createGrid(numberCell) {
         cell.classList.add('box');
         container.appendChild(cell);
         cell.innerText = i
-        if (numberMagic === i) {
-            cell.append(numberMagic + 1);
+        
+        if (listMagic.includes(i)){
+            cell.append(listMagic[`${i}`])
         }
 
-
-        
-
-
         cell.addEventListener('click', function () {
+
             cell.classList.toggle('box2');
             console.log(i + 1, 'colpita');
 
-            if (numberMagic == i) {
+            if (listMagic.includes(i)) {
 
                 cell.classList.toggle('boxMagic');
 

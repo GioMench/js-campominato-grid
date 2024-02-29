@@ -37,22 +37,24 @@ function createGrid(numberCell) {
         const cell = document.createElement('div');
         cell.classList.add('box');
         container.appendChild(cell);
-        cell.append(i + 1);
+
         if (numberMagic === i) {
-            cell.append(numberMagic);
+            var magic = cell.append(numberMagic + 1);
+        } else {
+            var notMagic = cell.append(i + 1);
         }
         //console.log(cell);
 
         var theCell = cell;
         console.log(i);
 
-       
+
 
 
         cell.addEventListener('click', function () {
 
 
-            if (numberMagic === i) {
+            if (magic === notMagic) {
                 cell.classList.toggle('boxMagic');
             } else {
                 cell.classList.toggle('box2');

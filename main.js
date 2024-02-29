@@ -10,7 +10,7 @@
  * add to element a class
  * add evenlistenr for change color of cell and log message
  * 
- */ 
+ */
 function createGrid(numberCell) {
 
     const container = document.getElementById('container');
@@ -25,7 +25,8 @@ function createGrid(numberCell) {
 
         cell.addEventListener('click', function () {
             cell.classList.toggle('box2');
-            console.log(i+1, 'colpita');
+            console.log(i + 1, 'colpita');
+            
         })
 
     }
@@ -35,10 +36,10 @@ function createGrid(numberCell) {
 
 document.getElementById("play").addEventListener('click', function () {
 
- 
-    
+
+
     createGrid(100);
-    
+
 
 });
 

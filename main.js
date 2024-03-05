@@ -20,17 +20,17 @@ function createGrid(numberCell) {
         var numberMagic = Math.floor((Math.random() * numberCell) + 1);
         listMagic.push(numberMagic);
         numberMagic = listMagic[i];
-        
+
 
         if (listMagic.includes(numberMagic)) {
             listMagic.push(numberMagic);
-            
-            
+
+
         } else {
             numberMagic = Math.floor((Math.random() * numberCell) + 1);
             listMagic.push
             console.log(listMagic);
-            
+
         }
 
     }
@@ -39,7 +39,6 @@ function createGrid(numberCell) {
 
 
     for (let i = 1; i <= numberCell; i++) {
-
 
         let cell = document.createElement('div');
         cell.classList.add('box');
@@ -52,9 +51,26 @@ function createGrid(numberCell) {
             console.log(i, 'colpita');
 
             if (listMagic.includes(i)) {
-
+                
                 cell.classList.add('boxMagic');
 
+                const gameover = document.createElement('div');
+
+                gameover.innerHTML =
+                    `
+                <input type="button"  value="GAME OVER" id="endgame" name="endgame"></input>
+
+                <div class="cover"></div>
+                `
+                ;
+                container.appendChild(gameover);
+
+                document.getElementById("endgame").addEventListener('click', function () {
+                    location.reload();
+                })
+                
+                
+            
             }
 
         });
@@ -104,6 +120,7 @@ document.getElementById("btn_medium").addEventListener('click', function () {
     createGrid(81);
 
     container.style.width = "900px";
+    endgame.style.width = "900px";
 
 
 });
@@ -113,6 +130,7 @@ document.getElementById("btn_hard").addEventListener('click', function () {
     createGrid(49);
 
     container.style.width = "700px";
+    endgame.style.width = "700px";
 
 
 

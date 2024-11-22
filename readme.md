@@ -1,4 +1,4 @@
-![Alt text]("easy.png")
+![Alt text]("https://github.com/GioMench/js-campominato-grid/blob/main/easy.png")
 
 # Consegna milestone 1
 - L'utente clicca su un bottone che genererà una griglia di gioco quadrata.

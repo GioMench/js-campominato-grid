@@ -1,4 +1,4 @@
-![Alt text]("C:\Users\patrizia\Desktop\logoDev\gm_logo_sfondo.png")
+![Alt text]("easy.png")
 
 # Consegna milestone 1
 - L'utente clicca su un bottone che genererà una griglia di gioco quadrata.
